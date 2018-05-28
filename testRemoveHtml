@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+#coding=utf-8
+
+import re
+html='<a href="http://www.outofmemory.cn">脚本分享网</a>,欢迎大家光临！'
+dr = re.compile(r'<[^>]+>',re.S)
+dd = dr.sub('',html)
+print(dd)

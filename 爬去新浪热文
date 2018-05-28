@@ -1,0 +1,12 @@
+url = 'http://news.sina.com.cn/hotnews/'
+web_data = requests.get(url)
+web_data.encoding = 'utf-8'
+soup = BeautifulSoup(web_data.text,'lxml')
+
+for news in soup.select('.ConsTi'):
+
+       # time = news.select('.time')[0].text
+    a = news.select('a')[0]['href']
+    title=news.get_text()
+    print(title)
+    print(a)

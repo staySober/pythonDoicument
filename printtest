@@ -1,0 +1,45 @@
+#!/usr/bin/env python
+#coding=utf-8
+
+# if语句
+a = 1;
+if(a > 1):
+    print("a 大于1")
+else:
+    print("a小于等于1");
+
+#while语句
+i =1;
+while(i <= 10) :
+        if(i==1) :
+                i = i +1
+                continue;
+        else:
+                print(i) 
+                i = i +1
+
+#for循环 range范围包前不包后
+for i in range(1,11):
+    print(i);
+
+#存储 列表
+my_array=["sober","kevin","vincent"];
+print(my_array[0] + "---->" + my_array[2]);    
+my_array.append("anier");
+print(my_array[3]);
+
+#迭代列表
+for x in my_array : print(x);print(len(x));
+print("my_array length:" +  str(len(my_array)));
+
+#等待输入
+#raw_input("\n\nPress the enter key to exit.");
+print("exit");
+
+#while else
+index = 1;
+while (index > 1):
+    print index
+else : print(index)    
+
+

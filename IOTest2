@@ -1,0 +1,27 @@
+#!/usr/bin/env python
+#coding=utf-8
+import os
+#重命名 删除文件
+MyFile =0;
+
+def rename() :
+    MyFile = open("MyText2.txt","w+")
+    print  "File is closed? :",MyFile.closed
+    MyFile.write("this is my job");
+
+    #重命名
+    os.rename("MyText2.txt","MyText3.txt");
+    print "rename ----> to ",MyFile.name
+    MyFile.close();
+
+    #重新读取
+    MyFile = open("MyText3.txt","r+")
+    print "readLine ----> ", MyFile.read()
+
+#mkdir()
+def newDir() :
+    myDir = os.mkdir("myDir")
+    os.rename("myDir","myDir2")
+
+newDir();
+#rename();
